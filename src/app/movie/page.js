@@ -1,4 +1,4 @@
-import { RAPID_URL } from "../utils/constants";
+import { RAPID_URL } from "../../utils/constants";
 import MovieCard from "../components/MovieCard";
 import styles from "@/app/styles/common.module.css";
 
@@ -8,8 +8,8 @@ const Movie = async () => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "c4c171777emsh9d9245833601c2cp1a6199jsn24181b8aa05a",
-      "X-RapidAPI-Host": "netflix54.p.rapidapi.com",
+      "X-RapidAPI-Key": process.env.API_KEY,
+      "X-RapidAPI-Host": process.env.RAPID_HOST,
     },
   };
 

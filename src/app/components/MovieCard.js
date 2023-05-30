@@ -12,7 +12,7 @@ const MovieCard = (item) => {
           <Image
             src={backgroundImage?.url}
             alt="Movie Image"
-            width={260}
+            width={280}
             height={200}
           />
         </div>
