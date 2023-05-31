@@ -23,14 +23,21 @@ const Movie = async () => {
         <div className={styles.container}>
           <h1>Movies & Series</h1>
           <div className={styles.card_section}>
-            {data.map((item) => {
-              return (
-                <MovieCard
-                  key={item.id}
-                  {...item}
-                />
-              );
-            })}
+            {data?.length > 0 ? (
+              data?.map((item) => {
+                return (
+                  <MovieCard
+                    key={item.id}
+                    {...item}
+                  />
+                );
+              })
+            ) : (
+              <p>
+                There was some problem loading data. Please try again after some
+                time.
+              </p>
+            )}
           </div>
         </div>
       </section>

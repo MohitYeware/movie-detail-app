@@ -1,27 +1,26 @@
 import styles from "@/app/styles/common.module.css";
+import { INFO_URL } from "@/utils/constants";
 import Image from "next/image";
 
 const Page = async ({ params }) => {
   const id = params.id;
 
-  const url = `https://netflix54.p.rapidapi.com/title/details/?ids=${id}&lang=en`;
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "c4c171777emsh9d9245833601c2cp1a6199jsn24181b8aa05a",
-      "X-RapidAPI-Host": "netflix54.p.rapidapi.com",
+      "X-RapidAPI-Key": process.env.API_KEY,
+      "X-RapidAPI-Host": process.env.RAPID_HOST,
     },
   };
 
-  const response = await fetch(url, options);
+  const response = await fetch(INFO_URL + id, options);
   const result = await response.json();
   const data = result[0]?.details;
 
   return (
     <div className={styles.container}>
       <h2 className={styles.movie_title}>
-        {" "}
-        Netflix \ <span> {data?.type} </span>{" "}
+        Watch on Netflix \ <span> {data?.type} </span>
       </h2>
       <div className={styles.card_section}>
         <div>

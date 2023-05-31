@@ -11,6 +11,12 @@ const HeroSection = ({ title, imageUrl }) => {
           <div className={styles.grid_two_section}>
             <div className={heroStyles.heroContent}>
               <h1>{title}</h1>
+              {title === "OUR JOURNEY" && (
+                <p>
+                  Here you will get list of all the lastest movies and series
+                  which are available on Netflix.
+                </p>
+              )}
               <p>
                 From award-winning dramas to blockbuster action movies,
                 we&apos;ve got you covered. Browse our selection of the latest

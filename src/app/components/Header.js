@@ -10,7 +10,7 @@ const Header = () => {
         <div className={styles.navbar_brand}>
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/sitelogo.png"
               alt="logo"
               width={75}
               height={75}

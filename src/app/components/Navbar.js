@@ -14,14 +14,15 @@ const navList = [
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  console.log("value " + openMenu);
 
   return (
     <nav className={styles.navbar}>
       <div className={openMenu ? `${styles.active}` : ""}>
         <ul className={styles.navbarList}>
-          {navList.map((item) => (
-            <li className={styles.navbarItem}>
+          {navList.map((item, index) => (
+            <li
+              className={styles.navbarItem}
+              key={index}>
               <Link
                 className={styles.navbarLink}
                 href={`${item.link}`}
