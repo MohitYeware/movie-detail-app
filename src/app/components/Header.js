@@ -16,7 +16,9 @@ const Header = () => {
               height={75}
             />
           </Link>
-          <h2>FunFlix</h2>
+          <h2>
+            Fun<span>Flix</span>
+          </h2>
         </div>
         <Navbar />
       </header>

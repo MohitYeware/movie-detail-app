@@ -1,4 +1,4 @@
-const MAX_LIMIT = 50;
+const MAX_LIMIT = 48;
 const LANGUAGE = "en";
 const SUGGESTIONS_LIMIT = 20;
 const OFFSET = 0;

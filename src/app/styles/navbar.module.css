@@ -26,6 +26,10 @@
   padding-left: 4%;
 }
 
+.navbar_brand h2 span {
+  color: #e50914;
+}
+
 .navbarList {
   display: flex;
   justify-content: space-around;
